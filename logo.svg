@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <style>
+    .logo-text {
+      fill: #ffffff;
+      font-family: Arial, sans-serif;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .logo-wave {
+      fill: #ff7f50;
+    }
+  </style>
+  <rect width="200" height="200" fill="#000000" />
+  <path class="logo-wave" d="M0 150 Q 50 125, 100 150 T 200 150 V 200 H 0 Z" />
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" class="logo-text">MovieWave</text>
+</svg>
