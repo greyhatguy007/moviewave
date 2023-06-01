@@ -31,7 +31,11 @@ const App = () => {
   }, [currentPage, searchValue]);
 
   const handleSearch = (value) => {
-    setSearchValue(value.trim());
+    let sval = value.trim();
+    if( sval === ""){
+      sval = RandomMovie();
+    }
+    setSearchValue(sval);
     setCurrentPage(1);
   };
 
