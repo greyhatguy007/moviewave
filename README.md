@@ -21,7 +21,7 @@ MovieWave is a streaming platform that allows users to discover and watch movies
 
 ## Installation and Setup
 
-1. Clone the repository: `git clone https://github.com/your-username/moviewave.git`
+1. Clone the repository: `git clone https://github.com/greyhatguy007/moviewave.git `
 2. Install dependencies: `npm install`
 3. Start the development server: `npm start`
 4. Access the app in your browser at `http://localhost:3000`
