@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/moviewave/static/css/main.641e7c52.css",
+    "main.js": "/moviewave/static/js/main.bf65e79b.js",
+    "index.html": "/moviewave/index.html",
+    "main.641e7c52.css.map": "/moviewave/static/css/main.641e7c52.css.map",
+    "main.bf65e79b.js.map": "/moviewave/static/js/main.bf65e79b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.641e7c52.css",
+    "static/js/main.bf65e79b.js"
+  ]
+}
