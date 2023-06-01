@@ -1,32 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Pagination = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const goToPreviousPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
-
-  const goToNextPage = () => {
-    setCurrentPage(currentPage + 1);
-  };
-
+const Pagination = ({
+  currentPage,
+  onPageChange,
+  goToPreviousPage,
+  goToNextPage,
+}) => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center pt-9 pb-16 font-semibold ">
       <button
-        className="py-2 px-4 rounded-l-lg border border-gray-300 focus:outline-none"
+        className="py-2 px-4 rounded-l-full border border-gray-300  mx-3 w-40 md:hover:bg-white md:hover:text-black  shadow-black active:bg-white active:text-black"
         onClick={goToPreviousPage}
       >
-        Previous
+        Previous Page
       </button>
-      <div className="py-2 px-4 border border-gray-300">{currentPage}</div>
+      <div className="py-2 px-4 mx-3 border border-gray-300 rounded-md ">
+        {currentPage}
+      </div>
       <button
-        className="py-2 px-4 rounded-r-lg border border-gray-300 focus:outline-none"
+        className="py-2 px-4 rounded-r-full border border-gray-300 focus:outline-none mx-3 w-40 md:hover:bg-white md:hover:text-black  shadow-black active:bg-white active:text-black"
         onClick={goToNextPage}
       >
-        Next
+        Next Page
       </button>
     </div>
   );

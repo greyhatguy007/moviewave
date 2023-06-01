@@ -5,7 +5,7 @@ const Card = ({ movie }) => {
 
   return (
     <div className="">
-      <div className="bg-white rounded-lg shadow-md overflow-hidden h-[11/12] =duration-300 hover:shadow-2xl hover:shadow-black transform transition-transform hover:scale-105">
+      <div className="bg-white rounded-lg shadow-md overflow-hidden h-[11/12] =duration-300 md:hover:shadow-2xl md:hover:shadow-black transform transition-transform md:hover:scale-105">
         {Poster !== "N/A" ? (
           <img
             src={Poster}
