@@ -2,6 +2,8 @@
 
 MovieWave is a streaming platform that allows users to discover and watch movies and TV series online. It provides a user-friendly interface to search for movies, browse through different genres, and enjoy a seamless streaming experience.
 
+### **Note : The current deployment is only staic on github pages, so it cannot fetch API calls. Run the build locally to see the full website**
+
 ## Features
 
 - Search: Easily search for movies or TV series by title or keywords.
@@ -19,7 +21,7 @@ MovieWave is a streaming platform that allows users to discover and watch movies
 
 ## Installation and Setup
 
-1. Clone the repository: `git clone https://github.com/your-username/moviewave.git`
+1. Clone the repository: `git clone https://github.com/greyhatguy007/moviewave.git `
 2. Install dependencies: `npm install`
 3. Start the development server: `npm start`
 4. Access the app in your browser at `http://localhost:3000`
