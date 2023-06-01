@@ -11,7 +11,7 @@ import RandomMovie from "./components/RandomMovie";
 import Footer from "./components/Footer";
 
 
-const url = "http://www.omdbapi.com/?i=tt3896198&apikey=b1cf3638&s=";
+const url = "https://www.omdbapi.com/?i=tt3896198&apikey=b1cf3638&s=";
 
 
 const App = () => {
