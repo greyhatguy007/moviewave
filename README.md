@@ -46,4 +46,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For any inquiries or questions, feel free to reach out to [mritvikprasad@gmail.com](mailto:mritvikprasad@gmail.com).
+For any inquiries or questions, feel free to reach out to [mritvikprasad@gmail.com](mailto:mritvikprasad@gmail.com) or open a new issue.
