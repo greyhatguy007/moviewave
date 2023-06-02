@@ -2,6 +2,8 @@
 
 MovieWave is a streaming platform that allows users to discover and watch movies and TV series online. It provides a user-friendly interface to search for movies, browse through different genres, and enjoy a seamless streaming experience.
 
+### [View website deployment](https://greyhatguy007.github.io/moviewave/)
+
 ## Features
 
 - Search: Easily search for movies or TV series by title or keywords.
