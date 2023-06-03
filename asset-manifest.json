@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/moviewave/static/css/main.641e7c52.css",
-    "main.js": "/moviewave/static/js/main.a8b41db1.js",
+    "main.css": "/moviewave/static/css/main.85c3e996.css",
+    "main.js": "/moviewave/static/js/main.3b276e87.js",
     "index.html": "/moviewave/index.html",
-    "main.641e7c52.css.map": "/moviewave/static/css/main.641e7c52.css.map",
-    "main.a8b41db1.js.map": "/moviewave/static/js/main.a8b41db1.js.map"
+    "main.85c3e996.css.map": "/moviewave/static/css/main.85c3e996.css.map",
+    "main.3b276e87.js.map": "/moviewave/static/js/main.3b276e87.js.map"
   },
   "entrypoints": [
-    "static/css/main.641e7c52.css",
-    "static/js/main.a8b41db1.js"
+    "static/css/main.85c3e996.css",
+    "static/js/main.3b276e87.js"
   ]
 }
