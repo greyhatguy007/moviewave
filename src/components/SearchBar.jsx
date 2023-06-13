@@ -5,6 +5,9 @@ const SearchBar = ({ onSearch }) => {
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
+    if (event.target.value.length >= 3) {
+      onSearch(event.target.value); 
+    }
   };
 
   const handleSearch = () => {
@@ -19,7 +22,7 @@ const SearchBar = ({ onSearch }) => {
           value={inputValue}
           onChange={handleInputChange}
           placeholder="Search Movies / Series"
-          className="mx-4 px-1 py-2  focus:outline-none md:py-2 lg:py-4 lg:w-96 lg:text-xl"
+          className="mx-4 px-1 py-2  focus:outline-none md:py-2 lg:py-4 lg:w-96 lg:text-xl bg-white"
         />
         <button onClick={handleSearch} className="bg-blue-500 hover:bg-blue-700 text-white px-2 rounded-md md:px-3 md:py-1 ">Search</button>
       </div>

@@ -40,9 +40,10 @@ const Card = ({ movie }) => {
           <div>
             {movieDetails.Poster !== "N/A" ? (
               <img
+                loading="lazy"
                 src={movieDetails.Poster}
                 alt={Title}
-                className="w-full h-[105] object-cover"
+                className="w-full h-3/5 object-fill"
               />
             ) : (
               <img
@@ -55,7 +56,6 @@ const Card = ({ movie }) => {
               <h3 className="text-xl font-bold mb-2">{Title}</h3>
               <p className="text-gray-500 text-sm mb-2">{Year}</p>
               <p className="text-gray-500 text-sm">{Type}</p>
-              {/* Display additional movie details */}
               <p className="my-1"> Genre : {movieDetails.Genre}</p>
               <p className="my-1"> Rating : {movieDetails.Rated}</p>
               <p className="my-1"> Languages : {movieDetails.Language}</p>

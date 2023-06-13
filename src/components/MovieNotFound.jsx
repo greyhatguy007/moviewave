@@ -1,6 +1,7 @@
 import React from "react";
 
-const MovieNotFound = () => {
+const MovieNotFound = ({ setPageDisabled}) => {
+  setPageDisabled(true);
   return (
     <div className="flex flex-col items-center justify-start h-screen">
       <p className="text-gray-700 mt-7 my-5 text-6xl md:text-9xl">OOPS !</p>

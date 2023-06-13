@@ -1,7 +1,11 @@
 import React from "react";
 import Card from "./Card";
+import Loading from "./Loading";
 
-const CardStack = ({ data }) => {
+const CardStack = ({ data, loading }) => {
+  if (loading) { 
+    return <Loading/>
+  }
   if (data === "False") {
     return <p>No movies found.</p>;
   }
