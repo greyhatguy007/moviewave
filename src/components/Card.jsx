@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 
+
 const Card = ({ movie }) => {
   const [success, setSuccess] = useState(false);
   const [detailsEnabled, setDetailsEnabled] = useState(false);
@@ -38,13 +39,16 @@ const Card = ({ movie }) => {
         if (window.innerWidth < 768) {
           setDetailsEnabled(!detailsEnabled);
         } else {
-          navigate(`/details/${imdbID}`)
+          navigate(`/details/${imdbID}`);
         }
       }}
       // onMouseEnter={() => setDetailsEnabled(true)}
       // onMouseLeave={() => setDetailsEnabled(false)}
     >
-      <div className="bg-white rounded-lg shadow-md overflow-hidden h-[11/12] =duration-300 md:hover:shadow-2xl md:hover:shadow-black transform transition-transform md:hover:scale-105">
+      <div
+        data-aos="zoom-in"
+        className="bg-white rounded-lg shadow-md overflow-hidden h-[11/12] duration-300 md:hover:shadow-2xl md:hover:shadow-black transform transition-transform md:hover:scale-105"
+      >
         {success &&
         window.innerWidth < 768 &&
         detailsEnabled &&

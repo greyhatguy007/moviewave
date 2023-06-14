@@ -2,6 +2,27 @@ import React from "react";
 import Card from "./Card";
 import Loading from "./Loading";
 
+import Aos from "aos";
+import "aos/dist/aos.css"
+
+Aos.init({
+  disable: false,
+  startEvent: "DOMContentLoaded",
+  initClassName: "aos-init", 
+  animatedClassName: "aos-animate", 
+  useClassNames: false,
+  disableMutationObserver: false, 
+  debounceDelay: 50, 
+  throttleDelay: 99, 
+  offset: 120, 
+  delay: 50, 
+  duration: 600, 
+  easing: "ease", 
+  once: false, 
+  mirror: false, 
+  anchorPlacement: "top-bottom",
+});
+
 const CardStack = ({ data, loading }) => {
   if (loading) { 
     return <Loading/>
