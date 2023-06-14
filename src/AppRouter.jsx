@@ -7,9 +7,9 @@ const AppRouter = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/details/:imdbID" element={<DetailedCard />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/moviewave" element={<App />} />
+        <Route path="/moviewave/details/:imdbID" element={<DetailedCard />} />
+        <Route path="/moviewave/*" element={<NotFound />} />
       </Routes>
     </div>
   );
