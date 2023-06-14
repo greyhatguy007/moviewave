@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 
 const Card = ({ movie }) => {
   const [success, setSuccess] = useState(false);
   const [detailsEnabled, setDetailsEnabled] = useState(false);
   const [movieDetails, setMovieDetails] = useState(null);
   const [rates, setRates] = useState(null);
-
   const { Title, Year, Type, Poster, imdbID } = movie;
+
+  const navigate = useNavigate();
+
 
   const getMovieDetails = async (imdbID) => {
     const response = await fetch(
@@ -31,12 +34,21 @@ const Card = ({ movie }) => {
   return (
     <div
       className=""
-      onClick={() => setDetailsEnabled(!detailsEnabled)}
+      onClick={() => {
+        if (window.innerWidth < 768) {
+          setDetailsEnabled(!detailsEnabled);
+        } else {
+          navigate(`/details/${imdbID}`)
+        }
+      }}
       // onMouseEnter={() => setDetailsEnabled(true)}
       // onMouseLeave={() => setDetailsEnabled(false)}
     >
       <div className="bg-white rounded-lg shadow-md overflow-hidden h-[11/12] =duration-300 md:hover:shadow-2xl md:hover:shadow-black transform transition-transform md:hover:scale-105">
-        {success && detailsEnabled && movieDetails ? (
+        {success &&
+        window.innerWidth < 768 &&
+        detailsEnabled &&
+        movieDetails ? (
           <div>
             {movieDetails.Poster !== "N/A" ? (
               <img
@@ -82,13 +94,20 @@ const Card = ({ movie }) => {
               {/* Add more movie details as desired */}
               <br />
 
-              <a className="my-1 block text-blue-500"
-                href={`https://www.primevideo.com/search/ref=atv_nb_sug?ie=UTF8&phrase=${Title.replace(" ","+")}`}
+              <a
+                className="my-1 block text-blue-500"
+                href={`https://www.primevideo.com/search/ref=atv_nb_sug?ie=UTF8&phrase=${movieDetails.Title.replace(
+                  " ",
+                  "+"
+                )}`}
               >
                 Search on Amazon Prime
               </a>
-              
-              <a className="my-1 block text-blue-500" href={`https://www.netflix.com/`}>
+
+              <a
+                className="my-1 block text-blue-500"
+                href={`https://www.netflix.com/`}
+              >
                 Search on Netflix
               </a>
             </div>

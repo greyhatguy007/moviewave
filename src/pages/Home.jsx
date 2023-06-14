@@ -2,27 +2,27 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import Header from "./components/Header";
-import SearchBar from "./components/SearchBar";
-import CardStack from "./components/CardStack";
-import Pagination from "./components/Pagination";
-import MovieNotFound from "./components/MovieNotFound";
-import RandomMovie from "./components/RandomMovie";
-import Footer from "./components/Footer"; 
-import useLocalStorage from "./components/useLocalStorage";
-
-
+import Header from "../components/Header";
+import SearchBar from "../components/SearchBar";
+import CardStack from "../components/CardStack";
+import Pagination from "../components/Pagination";
+import MovieNotFound from "../components/MovieNotFound";
+import RandomMovie from "../components/RandomMovie";
+import Footer from "../components/Footer";
+import useLocalStorage from "../components/useLocalStorage";
 
 const url = "https://www.omdbapi.com/?i=tt3896198&apikey=b1cf3638&s=";
-
 
 const App = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [searchValue, setSearchValue] = useLocalStorage("searchValue",RandomMovie());
+  const [searchValue, setSearchValue] = useLocalStorage(
+    "searchValue",
+    RandomMovie()
+  );
   const [currentPage, setCurrentPage] = useState(1);
   const [success, setSuccess] = useState(true);
-  const [pageDisabled, setPageDisabled] = useState(false);  
+  const [pageDisabled, setPageDisabled] = useState(false);
 
   useEffect(() => {
     const getData = async (search, page) => {
@@ -36,13 +36,16 @@ const App = () => {
         setPageDisabled(true);
       }
       setLoading(false);
+      console.log(res.Search);
+      
     };
     getData(searchValue, currentPage);
+
   }, [currentPage, searchValue]);
 
   const handleSearch = (value) => {
     let sval = value.trim();
-    if( sval === ""){
+    if (sval === "") {
       sval = RandomMovie();
     }
     setSearchValue(sval);
@@ -78,8 +81,12 @@ const App = () => {
   return (
     <div className="bg-gradient-to-r h-fit from-indigo-500 via-purple-500 to-pink-500">
       <Header />
-      <SearchBar onSearch={handleSearch} searchValue={ searchValue} />
-      {success ? <CardStack data={data} loading={loading} /> : <MovieNotFound setPageDisabled={ setPageDisabled} />}
+      <SearchBar onSearch={handleSearch} searchValue={searchValue} />
+      {success ? (
+        <CardStack data={data} loading={loading} />
+      ) : (
+        <MovieNotFound setPageDisabled={setPageDisabled} />
+      )}
       <Pagination
         currentPage={currentPage}
         onPageChange={handlePageChange}
@@ -87,7 +94,7 @@ const App = () => {
         goToNextPage={goToNextPage}
         pageDisabled={pageDisabled}
       />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
